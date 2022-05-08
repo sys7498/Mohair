@@ -1,0 +1,53 @@
+FaceTypeWithHair[][]
+
+  0          1          2          3          4          5          6          7
+0 angled_1   angled_2   angled_3   angled_4   angled_5   angled_6   angled_7   angled_8
+1 curved_1   curved_2   curved_3   curved_4   curved_5   curved_6   curved_7   curved_8
+2 egg_1      egg_2      egg_3      egg_4      egg_5      egg_6      egg_7      egg_8
+3 long_1     long_2     long_3     long_4     long_5     long_6     long_7     long_8
+4 triangle_1 triangle_2 triangle_3 triangle_4 triangle_5 triangle_6 triangle_7 triangle_8
+
+FaceType[][]
+
+  0        1      
+0 angled   selected  
+1 curved   selected
+2 egg      selected
+3 long     selected
+4 triangle selected
+
+HairStyle[][]
+
+   0       1     
+0  리젠트     selected
+1  포마드     selected
+2    크롭        selected
+3    가일        selected
+4    가르마     selected
+5    시스루     selected
+6    장발        selected
+7    드레드     selected
+
+HairStyle
+ 
+1. 리젠트
+2. 포마드
+3. 크롭
+4. 가일
+5. 가르마
+6. 시스루
+7. 장발
+8. 드레드
+
+FaceType
+
+1. angled
+2. curved
+3. egg
+4. long
+5. triangle
+
+
+
+
+			    
