@@ -19,14 +19,18 @@ FaceType[][]
 HairStyle[][]
 
    0       1     
-0  리젠트     selected
-1  포마드     selected
-2    크롭        selected
-3    가일        selected
-4    가르마     selected
-5    시스루     selected
-6    장발        selected
-7    드레드     selected
+0  리젠트   selected
+1  포마드   selected
+2  크롭     selected
+3  가일     selected
+4  가르마    selected
+5  시스루    selected
+6  장발      selected
+7  드레드    selected
+
+HairType[]
+0     1     2
+생머리 반곱슬 곱슬
 
 HairStyle
  
@@ -46,6 +50,12 @@ FaceType
 3. egg
 4. long
 5. triangle
+
+HairType
+
+1. 생머리
+2. 반곱슬
+3. 곱슬
 
 
 
