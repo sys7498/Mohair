@@ -28,9 +28,11 @@ HairStyle[][]
 6  장발      selected
 7  드레드    selected
 
-HairType[]
-0     1     2
-생머리 반곱슬 곱슬
+HairType[][]
+    0     1     
+0   생머리 selected
+1   반곱슬  selected
+2   곱슬    selected
 
 HairStyle
  
