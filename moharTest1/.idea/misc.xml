@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2375" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/drawable/click.xml" value="0.1" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/drawable/touchanim.xml" value="0.1" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/font/jua.xml" value="0.2611111111111111" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_fade.xml" value="0.187109375" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_hairlank.xml" value="0.1" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_homsrecy.xml" value="0.2" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_main2.xml" value="0.264" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_main3.xml" value="0.152" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_pop.xml" value="0.187109375" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_profile.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/bottom_navigation.xml" value="0.13523335883703136" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/cardview.xml" value="0.10075136612021858" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_databasetest.xml" value="0.299609375" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_home_main.xml" value="0.2" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_profile_main.xml" value="0.2" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_profragment.xml" value="0.1" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/person_item.xml" value="0.8800000000000001" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/profile_box.xml" value="0.264" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/profilebox.xml" value="0.536" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
