@@ -28,6 +28,24 @@ HairStyle[][]
 6  장발      selected
 7  드레드    selected
 
+newHairStyle[][]
+  1         2
+0 삭발	  selected	
+1 아이비리그  selected
+2 크롭       selected
+3 포마드     selected
+4 리젠트 	  selected
+5 올백 	  selected
+6 댄디 	  selected
+7 가일 	  selected
+8 시스루	  selected
+9 쉼표	  selected
+10 가르마	  selected
+11 쉐도우	  selected
+12 히피      selected
+13 드레드	  selected
+14 장발	  selected
+
 HairType[][]
     0     1     
 0   생머리 selected
@@ -44,6 +62,25 @@ HairStyle
 6. 시스루
 7. 장발
 8. 드레드
+
+newHairStyle
+
+삭발
+아이비리그
+크롭
+포마드
+리젠트
+올백
+댄디
+가일
+시스루
+쉼표
+가르마
+쉐도우
+히피
+드레드
+장발
+
 
 FaceType
 
