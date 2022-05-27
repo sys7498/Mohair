@@ -48,7 +48,7 @@ public class MainActivity2 extends AppCompatActivity {
         hairstyleAdapter.setLayoutManager(new LinearLayoutManager(hairstyleAdapter.getContext(), RecyclerView.HORIZONTAL, false));
         hairstyleAdapter hairAdapter = new hairstyleAdapter();
         hairstyleAdapter.setAdapter(hairAdapter);
-        for(int i = 0; i < 8; i++){
+        for(int i = 0; i < 15; i++){
             hairAdapter.addItem(new hairstyleItem(getDrawable(DrawableToInt.HairStyle[i][0]), getDrawable(DrawableToInt.HairStyle[i][1]), DrawableToInt.HairStyleName[i]));
         }
 

@@ -32,6 +32,9 @@ public class MainActivity3 extends AppCompatActivity {
     HomeFragment HomeFrag = new HomeFragment();
     profile_main ProfileFrag1 = new profile_main();
     Databasetest Databasetest = new Databasetest();
+    Recomfragment HairstyleRecommend = new Recomfragment();
+    ProductRecommend ProductRecommend = new ProductRecommend();
+
     SQLiteDatabase database;
 
     @Override
@@ -55,6 +58,8 @@ public class MainActivity3 extends AppCompatActivity {
         bundle.putString("hairlength", HairLength);
         HomeFrag.setArguments(bundle);
         ProfileFrag1.setArguments(bundle);
+        HairstyleRecommend.setArguments(bundle);
+
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction ft = manager.beginTransaction();
@@ -72,16 +77,19 @@ public class MainActivity3 extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, HomeFrag).commit();
                         return true;
                     case R.id.tab2:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, HomeFrag).commit();
+                        Intent intent = new Intent(MainActivity3.this, CameraActivity.class);
+                        intent.putExtra("hair", selected_number_hairstyle);
+                        startActivity(intent);
                         return true;
+
                     case R.id.tab3:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, HomeFrag).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, HairstyleRecommend).commit();
                         return true;
                     case R.id.tab4:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, Databasetest).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, ProductRecommend).commit();
                         return true;
                     case R.id.tab5:
-                            getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, ProfileFrag1).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, ProfileFrag1).commit();
                         return true;
                 }
                 return false;
