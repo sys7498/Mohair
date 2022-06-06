@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
     private ViewFlipper v_fllipper;
     int images[]={
             R.drawable.up,
-            R.drawable.down,
+            R.drawable.hairstyle_11,
             R.drawable.touch
     };
     public HomeFragment() {

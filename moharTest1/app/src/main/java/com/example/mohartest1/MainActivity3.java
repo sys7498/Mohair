@@ -30,10 +30,9 @@ public class MainActivity3 extends AppCompatActivity {
     String Name;
     String HairLength;
     HomeFragment HomeFrag = new HomeFragment();
-    profile_main ProfileFrag1 = new profile_main();
-    Databasetest Databasetest = new Databasetest();
     Recomfragment HairstyleRecommend = new Recomfragment();
     ProductRecommend ProductRecommend = new ProductRecommend();
+    kakaomap kakaomap = new kakaomap();
 
     SQLiteDatabase database;
 
@@ -57,7 +56,6 @@ public class MainActivity3 extends AppCompatActivity {
         bundle.putString("name", Name);
         bundle.putString("hairlength", HairLength);
         HomeFrag.setArguments(bundle);
-        ProfileFrag1.setArguments(bundle);
         HairstyleRecommend.setArguments(bundle);
 
 
@@ -89,7 +87,7 @@ public class MainActivity3 extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, ProductRecommend).commit();
                         return true;
                     case R.id.tab5:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, ProfileFrag1).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, kakaomap).commit();
                         return true;
                 }
                 return false;

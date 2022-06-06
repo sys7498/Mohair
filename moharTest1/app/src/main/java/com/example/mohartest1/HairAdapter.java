@@ -59,11 +59,13 @@ public class HairAdapter extends RecyclerView.Adapter<HairAdapter.ViewHolder> {
     static class  ViewHolder extends RecyclerView.ViewHolder{
         TextView Textview;
         ImageButton Imagebutton;
+        TextView explain;
         int i=0;
         public ViewHolder(View itemView,final OnHairItemClickListener listener){
             super(itemView);
-            Textview = itemView.findViewById(R.id.textview_two);
-            Imagebutton = itemView.findViewById(R.id.imageview_two);
+            Textview = itemView.findViewById(R.id.recommend_hairstyle_name);
+            Imagebutton = itemView.findViewById(R.id.recommend_hairstyle_img);
+            explain = itemView.findViewById(R.id.recommend_hairstyle_explain);
             Imagebutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -78,6 +80,7 @@ public class HairAdapter extends RecyclerView.Adapter<HairAdapter.ViewHolder> {
         public void setItem(Hair hair){
             Textview.setText(hair.getName());
             Imagebutton.setBackgroundResource(hair.getImageRes());
+            explain.setText(hair.getExplain());
         }
     }
 }

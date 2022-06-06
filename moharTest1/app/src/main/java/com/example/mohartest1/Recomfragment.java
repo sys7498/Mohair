@@ -91,25 +91,25 @@ public class Recomfragment extends Fragment {
         TextView textCon = rootView.findViewById(R.id.storeLenImage);
         // 우선순위 알고리즘 계산
         for(int i=0;i<hairPriority.length;i++){ //넣어주기. 점수, 머리,상태, 이름
-            hairPriority[i] = new HairPriority(0,Draw.HairStyle[i][0],null,Draw.HairStyleName[i]);
+            hairPriority[i] = new HairPriority(0,Draw.HairStyle[i][0],null,Draw.HairStyleName[i], Draw.HairStyleExplain[i]);
         }
         HairLenFind(copylen); //머리길이에 따른 어울리는 헤어 우선순위 결정
         FaceFind(Ima_two); //얼굴형에 따른 어울리는 헤어 우선순위 결정
         Arrays.sort(hairPriority); //오름차순 정렬
         for(int i=0;i<hairPriority.length;i++){
             if(hairPriority[i].getNumber()==0)
-                hairPriority[i].setCondition("excellent");
+                hairPriority[i].setCondition("EXCELLENT");
             else if(hairPriority[i].getNumber()==1)
-                hairPriority[i].setCondition("good");
+                hairPriority[i].setCondition("GOOD");
             else if(hairPriority[i].getNumber()==2)
-                hairPriority[i].setCondition("soso");
+                hairPriority[i].setCondition("SOSO");
             else if(hairPriority[i].getNumber()==3)
-                hairPriority[i].setCondition("bad");
+                hairPriority[i].setCondition("BAD");
             else if(hairPriority[i].getNumber()==4)
-                hairPriority[i].setCondition("worst");
+                hairPriority[i].setCondition("WORST");
         }
         for(int i=0;i<hairPriority.length;i++) {
-            hairAdapter.addItem(new Hair(hairPriority[i].getHairName(),hairPriority[i].getImageNumber()));
+            hairAdapter.addItem(new Hair(hairPriority[i].getHairName(),hairPriority[i].getImageNumber(),hairPriority[i].getExplain()));
         }
 
         imageViewProfile.setImageResource(Draw.FaceTypeWithHair[Ima_two][Ima_one]);

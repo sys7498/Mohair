@@ -10,8 +10,8 @@
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/font/jua.xml" value="0.2611111111111111" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_camera.xml" value="0.2815049864007253" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_fade.xml" value="0.187109375" />
-        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_hairitem.xml" value="0.20008550662676358" />
-        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_hairlank.xml" value="0.1" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_hairitem.xml" value="0.27593360995850624" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_hairlank.xml" value="0.4" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_homsrecy.xml" value="0.2" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/activity_main2.xml" value="0.264" />
@@ -23,14 +23,20 @@
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_databasetest.xml" value="0.299609375" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_home_main.xml" value="0.2" />
-        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_product_recommend.xml" value="0.264" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_kakaomap.xml" value="0.2" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_map.xml" value="0.1671654553227875" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_product_recommend.xml" value="0.3803418803418803" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_product_recommend_tabs.xml" value="0.29884566053869177" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_profile_main.xml" value="0.2" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_profragment.xml" value="0.1" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_recomfragment.xml" value="0.32791791363830697" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/fragment_waxtab.xml" value="0.32791791363830697" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/person_item.xml" value="0.8800000000000001" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/product_box.xml" value="0.3087035358114234" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/profile_box.xml" value="0.264" />
         <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/layout/profilebox.xml" value="0.536" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/menu/bottom_navigation.xml" value="0.20008550662676358" />
+        <entry key="..\:/Users/sys74/AndroidStudioProjects/moharTest1/app/src/main/res/xml/network_security_config.xml" value="0.18255664814023087" />
       </map>
     </option>
   </component>

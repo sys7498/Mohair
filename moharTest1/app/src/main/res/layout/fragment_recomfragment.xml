@@ -11,12 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="160dp"
             app:cardBackgroundColor="#FFFFFFFF"
             app:cardCornerRadius="0dp"
             app:cardElevation="0dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -105,6 +107,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:orientation="vertical">
 
                         <TextView
@@ -117,12 +120,23 @@
                             android:textColor="@color/black"
                             android:textSize="20sp" />
 
-                        <TextView
-                            android:id="@+id/storeLenImage"
+                        <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
-                            android:layout_height="148dp"
-                            android:text="TextView"
-                            android:textColor="@color/black" />
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/storeLenImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/jua"
+                                android:text="골라주세요"
+                                android:textColor="@color/black"
+                                android:textSize="24sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -141,13 +155,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="우선순위 "
-                    android:paddingLeft="5dp"
                     android:fontFamily="@font/jua"
-                    android:textColor="@color/black"/>
+                    android:paddingLeft="5dp"
+                    android:text="헤어스타일 선택"
+                    android:textColor="@color/black"
+                    android:textSize="34sp" />
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerview_priority"
                     android:layout_width="match_parent"

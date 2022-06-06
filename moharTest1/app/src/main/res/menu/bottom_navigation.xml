@@ -9,26 +9,26 @@
 
     <item
         android:id="@+id/tab2"
-        app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="이메일"/>
+        android:title="카메라"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/tab3"
-        app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="이메일"/>
+        android:title="헤어추천"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/tab4"
-        app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="이메일"/>
+        android:title="제품추천"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/tab5"
-        app:showAsAction="ifRoom"
         android:enabled="true"
         android:icon="@android:drawable/ic_dialog_email"
-        android:title="프로필"/>
+        android:title="미용실찾기"
+        app:showAsAction="ifRoom" />
 </menu>

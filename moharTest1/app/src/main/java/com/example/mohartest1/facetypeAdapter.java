@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 
@@ -55,11 +57,13 @@ public class facetypeAdapter extends RecyclerView.Adapter<facetypeAdapter.ViewHo
                     int pos = getAdapterPosition();
                     if (pos != RecyclerView.NO_POSITION) {
                         if (check == -1) {
+                            //Glide.with(view.getContext()).load(items.get(pos).getSelected_facetype()).into(facetypeImgView);
                             facetypeImgView.setImageDrawable(items.get(pos).getSelected_facetype());
                             check = pos;
                             selected_number_facetype = pos;
                         } else {
                             if (check == pos) {
+                                //Glide.with(view.getContext()).load(items.get(pos).getFacetype()).into(facetypeImgView);
                                 facetypeImgView.setImageDrawable(items.get(pos).getFacetype());
                                 check = -1;
                                 selected_number_facetype = 0;

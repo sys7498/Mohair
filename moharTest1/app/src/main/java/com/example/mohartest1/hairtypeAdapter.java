@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class hairtypeAdapter extends RecyclerView.Adapter<hairtypeAdapter.ViewHolder>{
@@ -51,11 +53,13 @@ public class hairtypeAdapter extends RecyclerView.Adapter<hairtypeAdapter.ViewHo
                     int pos = getAdapterPosition();
                     if (pos != RecyclerView.NO_POSITION) {
                         if (check == -1) {
+                            //Glide.with(view.getContext()).load(items.get(pos).getSelected_hairtype()).into(hairTypeImgView);
                             hairTypeImgView.setImageDrawable(items.get(pos).getSelected_hairtype());
                             check = pos;
                             selected_number_hairtype = pos;
                         } else {
                             if (check == pos) {
+                                //Glide.with(view.getContext()).load(items.get(pos).getHairtype()).into(hairTypeImgView);
                                 hairTypeImgView.setImageDrawable(items.get(pos).getHairtype());
                                 check = -1;
                                 selected_number_hairtype = 0;
