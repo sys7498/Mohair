@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -27,11 +28,15 @@ public class MainActivity2 extends AppCompatActivity {
     String hair_length;
     int profile_check = 1;
 
+    DatabaseHelper InitialHelper;
+    SQLiteDatabase dbInitial;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-
+        InitialHelper = Databaseshare.getInstance(this);
+        dbInitial= InitialHelper.getWritableDatabase();
 
         TextInputEditText nameET = findViewById(R.id.profile_name);
         TextInputEditText hair_lengthET = findViewById(R.id.profile_hair_length);
@@ -66,14 +71,22 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 name = nameET.getText().toString();
                 hair_length = hair_lengthET.getText().toString();
-
                 Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+                /***
                 intent.putExtra("facetypenumber", faceAdapter.selected_number_facetype);
                 intent.putExtra("hairstylenumber", hairAdapter.selected_number_hairstyle);
                 intent.putExtra("hairtypenumber", hairtypeAdapter.selected_number_hairtype);
                 intent.putExtra("name", name);
                 intent.putExtra("hairlength", hair_length);
                 intent.putExtra("profile_check", profile_check);
+                 ***/
+                dbInitial.execSQL("UPDATE mtable " + "SET" + " name='"+ name +"'" +","+" hairlen='"+ hair_length +"'"+","
+                        +"mozil="+hairtypeAdapter.selected_number_hairtype+""+","
+                        +"hair="+hairAdapter.selected_number_hairstyle+""+","
+                        +"face="+faceAdapter.selected_number_facetype+""+","
+                        +"state=1"+
+                        " WHERE Id=1");
+
                 startActivity(intent);
             }
         });

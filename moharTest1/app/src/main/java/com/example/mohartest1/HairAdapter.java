@@ -1,5 +1,6 @@
 package com.example.mohartest1;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class HairAdapter extends RecyclerView.Adapter<HairAdapter.ViewHolder> {
+public class HairAdapter extends RecyclerView.Adapter<HairAdapter.ViewHolder> implements OnHairItemClickListener {
     ArrayList<Hair> Items = new ArrayList<Hair>();
     OnHairItemClickListener listener;
 
@@ -55,18 +56,34 @@ public class HairAdapter extends RecyclerView.Adapter<HairAdapter.ViewHolder> {
             listener.onItemClick(holder,view,position);
     }
 
+    @Override
+    public void onItemClick1(ViewHolder holder, View view, int position) {
+        if(listener!=null)
+            listener.onItemClick1(holder,view,position);
+    }
+
+    @Override
+    public void onItemClick2(ViewHolder holder, View view, int position) {
+        if(listener!=null)
+            listener.onItemClick2(holder,view,position);
+    }
+
 
     static class  ViewHolder extends RecyclerView.ViewHolder{
         TextView Textview;
         ImageButton Imagebutton;
+        ImageButton imageButton2;
+        ImageButton imageButton3;
         TextView explain;
         int i=0;
         public ViewHolder(View itemView,final OnHairItemClickListener listener){
             super(itemView);
             Textview = itemView.findViewById(R.id.recommend_hairstyle_name);
-            Imagebutton = itemView.findViewById(R.id.recommend_hairstyle_img);
+            Imagebutton = itemView.findViewById(R.id.recommend_hairstyle_img); //이미지
+            imageButton2 = itemView.findViewById(R.id.imageButton2);
+            imageButton3 = itemView.findViewById(R.id.imageButtonC);//카메라
             explain = itemView.findViewById(R.id.recommend_hairstyle_explain);
-            Imagebutton.setOnClickListener(new View.OnClickListener() {
+            imageButton2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     int pos = getAdapterPosition();
@@ -75,12 +92,31 @@ public class HairAdapter extends RecyclerView.Adapter<HairAdapter.ViewHolder> {
                     }
                 }
             });
-
+            Imagebutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos = getAdapterPosition();
+                    if (listener!=null){
+                        listener.onItemClick1(HairAdapter.ViewHolder.this,view,pos);
+                    }
+                }
+            });
+            imageButton3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int pos = getAdapterPosition();
+                    if (listener!=null){
+                        listener.onItemClick2(HairAdapter.ViewHolder.this,view,pos);
+                    }
+                }
+            });
         }
         public void setItem(Hair hair){
             Textview.setText(hair.getName());
             Imagebutton.setBackgroundResource(hair.getImageRes());
             explain.setText(hair.getExplain());
+            imageButton2.setBackgroundResource(hair.getButtonRes());
+            imageButton3.setBackgroundResource(R.drawable.camera);
         }
     }
 }

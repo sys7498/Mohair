@@ -40,15 +40,14 @@ public class CameraActivity extends AppCompatActivity implements AutoPermissions
         previewFrame.addView(cameraView); //CameraSurfaceView를 framelayout에 넣기
         HomeFragment Homefragment = new HomeFragment();
         Intent Inte = getIntent();
-        int ima1 = Inte.getIntExtra("hair",0);
+        int ima1 = Inte.getIntExtra("selectHair",0);
         ImageView imageView;
         imageView = findViewById(R.id.hairImage);
         Button button = findViewById(R.id.cameraButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //imageView.setImageResource(Draw.HairStyle[ima1][0]);
-                imageView.setImageResource(R.drawable.up);
+                imageView.setImageResource(ima1);
             }
         });
         AutoPermissions.Companion.loadAllPermissions(this, 101);

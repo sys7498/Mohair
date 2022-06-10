@@ -10,25 +10,28 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
     <uses-feature
         android:name="android.hardware.camera.front"
         android:required="true" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
-        android:theme="@style/Theme.MoharTest1">
+        android:theme="@style/Theme.MoharTest1"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
         <activity
             android:name=".activity_fade"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,10 +50,10 @@
         <activity
             android:name=".CameraActivity"
             android:exported="false" />
+
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="a49337f151d93d6e75e34d4f5ff8cbe5"/>
-
+            android:value="a49337f151d93d6e75e34d4f5ff8cbe5" />
     </application>
 
 </manifest>

@@ -119,8 +119,10 @@ public class kakaomap extends Fragment{
                                                         marker1.setItemName("" + response.body().documents.get(i).place_name + "/" + response.body().documents.get(i).phone);
                                                         marker1.setTag(0);
                                                         marker1.setMapPoint(point1);
-                                                        marker1.setMarkerType(MapPOIItem.MarkerType.BluePin);
-                                                        marker1.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
+                                                        marker1.setCustomImageResourceId(R.drawable.map_unselected);
+                                                        marker1.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+                                                        marker1.setCustomSelectedImageResourceId(R.drawable.map_selected);
+                                                        marker1.setSelectedMarkerType(MapPOIItem.MarkerType.CustomImage);
                                                         mapView.addPOIItem(marker1);
 
                                                     }

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.Image;
 import android.os.Bundle;
@@ -33,15 +34,20 @@ public class MainActivity3 extends AppCompatActivity {
     Recomfragment HairstyleRecommend = new Recomfragment();
     ProductRecommend ProductRecommend = new ProductRecommend();
     kakaomap kakaomap = new kakaomap();
-
+    DatabaseHelper HomeHelper;
+    SQLiteDatabase dbHome;
     SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+        HomeHelper = Databaseshare.getInstance(this);
+        dbHome = HomeHelper.getWritableDatabase();
+        Cursor cursor = dbHome.rawQuery("select Id, name, hairlen, mozil, hair, face, state from mtable",null);
+        cursor.moveToNext();
 
-        Intent intent = getIntent();
+        /***Intent intent = getIntent();
         selected_number_facetype = intent.getIntExtra("facetypenumber", 0);
         selected_number_hairstyle = intent.getIntExtra("hairstylenumber", 0);
         selected_number_hairtype = intent.getIntExtra("hairtypenumber", 0);
@@ -56,7 +62,7 @@ public class MainActivity3 extends AppCompatActivity {
         bundle.putString("name", Name);
         bundle.putString("hairlength", HairLength);
         HomeFrag.setArguments(bundle);
-        HairstyleRecommend.setArguments(bundle);
+        HairstyleRecommend.setArguments(bundle); ***/
 
 
         FragmentManager manager = getSupportFragmentManager();
@@ -75,19 +81,21 @@ public class MainActivity3 extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, HomeFrag).commit();
                         return true;
                     case R.id.tab2:
-                        Intent intent = new Intent(MainActivity3.this, CameraActivity.class);
-                        intent.putExtra("hair", selected_number_hairstyle);
+                       /***Intent intent = new Intent(MainActivity3.this, CameraActivity.class);
                         startActivity(intent);
+                        ***/
+                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer,HairstyleRecommend).commit();
                         return true;
 
                     case R.id.tab3:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, HairstyleRecommend).commit();
-                        return true;
-                    case R.id.tab4:
                         getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, ProductRecommend).commit();
                         return true;
-                    case R.id.tab5:
+                    case R.id.tab4:
                         getSupportFragmentManager().beginTransaction().replace(R.id.homeContainer, kakaomap).commit();
+                        return true;
+                    case R.id.tab5:
+                        Intent intent = new Intent(MainActivity3.this,Profile.class);
+                        startActivity(intent);
                         return true;
                 }
                 return false;

@@ -8,7 +8,7 @@ public class DrawableToInt {
             {R.drawable.long_face, R.drawable.selected_long_face},
             {R.drawable.triangle_face, R.drawable.selected_triangle_face}};
 
-    static int[][] HairStyle = {{R.drawable.hairstyle_3, R.drawable.selected_hairstyle_3}, //0삭발
+    static int[][] HairStyle = {{R.drawable.hairstyle_0, R.drawable.selected_hairstyle_0}, //0삭발
             {R.drawable.hairstyle_1, R.drawable.selected_hairstyle_1}, //1아이비리그
             {R.drawable.hairstyle_2, R.drawable.selected_hairstyle_2}, //2크롭
             {R.drawable.hairstyle_3, R.drawable.selected_hairstyle_3}, //3포마드
@@ -24,29 +24,29 @@ public class DrawableToInt {
             {R.drawable.hairstyle_13,R.drawable.selected_hairstyle_13}, //13드레드
             {R.drawable.hairstyle_14,R.drawable.selected_hairstyle_14}}; //14장발
 
-    static int[][] FaceTypeWithHair = {{R.drawable.angled_1, R.drawable.angled_2, R.drawable.angled_3,
+    static int[][] FaceTypeWithHair = {{R.drawable.angled_0,R.drawable.angled_1, R.drawable.angled_2, R.drawable.angled_3,
             R.drawable.angled_4, R.drawable.angled_5, R.drawable.angled_6, R.drawable.angled_7, R.drawable.angled_8,
-            R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2,
-            R.drawable.angled_2, R.drawable.angled_2},
+            R.drawable.angled_9, R.drawable.angled_10, R.drawable.angled_11, R.drawable.angled_12, R.drawable.angled_13,
+            R.drawable.angled_14},
 
-            {R.drawable.curved_1, R.drawable.curved_2, R.drawable.curved_3, R.drawable.curved_4,
-                    R.drawable.curved_5, R.drawable.curved_6, R.drawable.curved_7, R.drawable.curved_8,
-                    R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2,
-                    R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2},
+            {R.drawable.curved_0, R.drawable.curved_1, R.drawable.curved_2, R.drawable.curved_3,
+                    R.drawable.curved_4, R.drawable.curved_5, R.drawable.curved_6, R.drawable.curved_7,
+                    R.drawable.curved_8, R.drawable.curved_9, R.drawable.curved_10, R.drawable.curved_11,
+                    R.drawable.curved_12, R.drawable.curved_13, R.drawable.curved_14},
 
-            {R.drawable.egg_1, R.drawable.egg_2, R.drawable.egg_3, R.drawable.egg_4, R.drawable.egg_5,
-                    R.drawable.egg_6, R.drawable.egg_7, R.drawable.egg_8, R.drawable.angled_2,
-                    R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2,
-                    R.drawable.angled_2, R.drawable.angled_2},
+            {R.drawable.egg_0, R.drawable.egg_1, R.drawable.egg_2, R.drawable.egg_3, R.drawable.egg_4,
+                    R.drawable.egg_5, R.drawable.egg_6, R.drawable.egg_7, R.drawable.angled_8,
+                    R.drawable.egg_9, R.drawable.egg_10, R.drawable.egg_11, R.drawable.egg_12,
+                    R.drawable.egg_13, R.drawable.egg_14},
 
-            {R.drawable.long_1, R.drawable.long_2, R.drawable.long_3, R.drawable.long_4, R.drawable.long_5,
-                    R.drawable.long_6, R.drawable.long_7, R.drawable.long_8, R.drawable.angled_2, R.drawable.angled_2,
-                    R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2},
+            {R.drawable.long_0, R.drawable.long_1, R.drawable.long_2, R.drawable.long_3, R.drawable.long_4,
+                    R.drawable.long_5, R.drawable.long_6, R.drawable.long_7, R.drawable.long_8, R.drawable.long_9,
+                    R.drawable.long_10, R.drawable.long_11, R.drawable.long_12, R.drawable.long_13, R.drawable.long_14},
 
-            {R.drawable.triangle_1, R.drawable.triangle_2, R.drawable.triangle_3, R.drawable.triangle_4,
-                    R.drawable.triangle_5, R.drawable.triangle_6, R.drawable.triangle_7, R.drawable.triangle_8,
-                    R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2, R.drawable.angled_2,
-                    R.drawable.angled_2, R.drawable.angled_2}};
+            {R.drawable.triangle_0, R.drawable.triangle_1, R.drawable.triangle_2, R.drawable.triangle_3,
+                    R.drawable.triangle_5, R.drawable.triangle_3, R.drawable.triangle_6, R.drawable.triangle_7,
+                    R.drawable.triangle_8, R.drawable.triangle_9, R.drawable.triangle_10, R.drawable.triangle_11, R.drawable.triangle_12,
+                    R.drawable.triangle_13, R.drawable.triangle_14}};
 
     static int[][] HairType = {{R.drawable.hairtype_1, R.drawable.selected_hairtype_1},
             {R.drawable.hairtype_2, R.drawable.selected_hairtype_2},
@@ -54,7 +54,7 @@ public class DrawableToInt {
 
     static String[] HairStyleName = {"삭발", "아이비리그", "크롭", "포마드", "리젠트", "올백", "댄디", "가일", "시스루", "쉼표", "가르마", "쉐도우", "히피", "드레드", "장발"};
 
-    static String[] FaceTypeName = {"각진형", "둥근형", "게란형", "길다란형", "삼각형"};
+    static String[] FaceTypeName = {"각진형", "둥근형", "계란형", "길다란형", "삼각형"};
 
     static String[] HairTypeName={"직모","반곱슬","곱슬"};
 

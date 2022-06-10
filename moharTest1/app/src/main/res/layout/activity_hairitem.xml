@@ -15,7 +15,7 @@
         android:layout_marginBottom="8dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="10dp"
-        app:cardElevation="2dp"
+        app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -70,8 +70,18 @@
                 app:layout_constraintHorizontal_bias="0.936"
                 app:layout_constraintStart_toEndOf="@+id/recommend_hairstyle_img"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
-                app:srcCompat="@drawable/img_1" />
+                app:layout_constraintVertical_bias="0.158" />
+
+            <ImageButton
+                android:id="@+id/imageButtonC"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.936"
+                app:layout_constraintStart_toEndOf="@+id/recommend_hairstyle_img"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.854" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

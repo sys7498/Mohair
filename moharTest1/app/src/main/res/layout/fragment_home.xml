@@ -13,14 +13,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="0dp"
+        android:background="#EDEDED"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#EDEDED"
+            android:fontFamily="@font/jua"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:text="XXX님\n모헤어에 오신것을 환영합니다\n"
+            android:textColor="@color/black"
+            android:textSize="52sp" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="#FFFFFFFF"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="10dp"
             app:cardElevation="0dp">
 
             <LinearLayout
@@ -43,15 +58,6 @@
                         android:text="프로필 요약"
                         android:textColor="@color/black"
                         android:textSize="28sp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        tools:src="@tools:sample/avatars" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -167,7 +173,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -175,13 +180,14 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="#FFFFFFFF"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="10dp"
             app:cardElevation="0dp"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <TextView
@@ -206,15 +212,15 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="#FFFFFFFF"
-            app:cardCornerRadius="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
             app:cardElevation="0dp"
             app:cardUseCompatPadding="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <TextView
@@ -225,30 +231,20 @@
                     android:fontFamily="@font/jua"
                     android:paddingLeft="0dp"
                     android:paddingTop="0dp"
-                    android:text="헤어 랭킹"
+                    android:text="추천 동영상"
                     android:textColor="@color/black"
                     android:textSize="28sp" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview_four"
+                <ViewFlipper
+                    android:id="@+id/image_slide"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp" />
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp" />
 
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#FFFFFFFF"
-            app:cardCornerRadius="0dp"
-            app:cardElevation="0dp"
-            app:cardUseCompatPadding="true">
-
-            <ViewFlipper
-                android:id="@+id/image_slide"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>

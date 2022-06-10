@@ -1,5 +1,8 @@
 package com.example.mohartest1;
 
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +37,8 @@ public class Recomfragment extends Fragment {
     private String len;
     private  DrawableToInt Draw = new DrawableToInt();
     private HairPriority[] hairPriority = new HairPriority[15];
+    DatabaseHelper RecomHelper;
+    SQLiteDatabase dbRecom;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -77,6 +83,11 @@ public class Recomfragment extends Fragment {
         LinearLayoutManager layoutManager5 = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false);
         recyclerView6.setLayoutManager(layoutManager5);
         HairAdapter hairAdapter = new HairAdapter();
+        RecomHelper = Databaseshare.getInstance(getContext());
+        dbRecom = RecomHelper.getWritableDatabase();
+        Cursor cursor = dbRecom.rawQuery("select Id, name, hairlen, mozil, hair, face, state from mtable",null);
+        cursor.moveToNext();
+        /***
         Bundle extra = this.getArguments();
         if(extra!=null){
             extra=getArguments();
@@ -85,7 +96,9 @@ public class Recomfragment extends Fragment {
             Ima_th = extra.getInt("hairtypenumber");
             len = extra.getString("hairlength");
         }
-        int copylen = Integer.parseInt(len);
+         ***/
+        ImageButton imageButton3 = rootView.findViewById(R.id.imageButtonC);
+        int copylen = Integer.parseInt(cursor.getString(2));
         ImageView imageViewProfile = rootView.findViewById(R.id.storeProfileimage);
         ImageView imageHair = rootView.findViewById(R.id.storeHimage);
         TextView textCon = rootView.findViewById(R.id.storeLenImage);
@@ -108,17 +121,57 @@ public class Recomfragment extends Fragment {
             else if(hairPriority[i].getNumber()==4)
                 hairPriority[i].setCondition("WORST");
         }
+        Cursor icursor = dbRecom.rawQuery("select _id, imageNumber from itable",null);
         for(int i=0;i<hairPriority.length;i++) {
-            hairAdapter.addItem(new Hair(hairPriority[i].getHairName(),hairPriority[i].getImageNumber(),hairPriority[i].getExplain()));
+            icursor.moveToNext();
+            hairAdapter.addItem(new Hair(hairPriority[i].getHairName(),hairPriority[i].getImageNumber(),hairPriority[i].getExplain(),icursor.getInt(1)));
         }
 
-        imageViewProfile.setImageResource(Draw.FaceTypeWithHair[Ima_two][Ima_one]);
+        imageViewProfile.setImageResource(Draw.FaceTypeWithHair[cursor.getInt(5)][cursor.getInt(4)]);
         recyclerView6.setAdapter(hairAdapter);
         hairAdapter.setOnItemClicklistener(new OnHairItemClickListener() {
             @Override
             public void onItemClick(HairAdapter.ViewHolder holder, View view, int position) {
-                imageHair.setBackgroundResource(hairPriority[position].getImageNumber());
+                Cursor icursor = dbRecom.rawQuery("select _id, imageNumber from itable",null);
+                Cursor pcursor = dbRecom.rawQuery("select _id, p from ptable",null);
+                for(int i=0;i<15;i++){
+                    icursor.moveToNext();
+                    pcursor.moveToNext();
+                    if(position==icursor.getInt(0)-1){ //버튼의 포지션이 같은데
+                        if(icursor.getInt(1)!=R.drawable.heart1){ // 700145 << 초기 이미지 번호가 아니면 이미 눌린거라서
+                            dbRecom.execSQL("UPDATE itable " + "SET" + " imageNumber="+R.drawable.heart1+""
+                                    + " WHERE _id="+icursor.getInt(0)+""); //해당 _id에 맞는 postion에 초기 이미지 번호를 업데이트
+                            dbRecom.execSQL("UPDATE ptable " + "SET" + " p=0" //머리정보 저장
+                                    + " WHERE _id="+pcursor.getInt(0)+""); //해당 _id에 맞는 postion에 초기 이미지 번호를 업데이트
+                            holder.imageButton2.setBackgroundResource(R.drawable.heart1);//처음 하트
+                        }else if(icursor.getInt(1)==R.drawable.heart1){ //처음 이미지면 바꾸기
+                            dbRecom.execSQL("UPDATE itable " + "SET" + " imageNumber="+R.drawable.heart2+""
+                                    + " WHERE _id="+icursor.getInt(0)+""); //해당 _id에 맞는 postion에 초기 이미지 번호를 업데이트
+                            dbRecom.execSQL("UPDATE ptable " + "SET" + " p="+hairPriority[position].getImageNumber()+""  //머리정보 초기화
+                                    + " WHERE _id="+pcursor.getInt(0)+""); //해당 _id에 맞는 postion에 초기 이미지 번호를 업데이트
+                            holder.imageButton2.setBackgroundResource(R.drawable.heart2);//눌린 하트
+                            Log.i("Dsd",Integer.toString(R.drawable.heart2));
+                        }
+                    }
+                }
+                /*** imageHair.setBackgroundResource(hairPriority[position].getImageNumber());
                 textCon.setText(hairPriority[position].getCondition());
+                ***/
+            }
+            //이미지
+            @Override
+            public void onItemClick1(HairAdapter.ViewHolder holder, View view, int position) {
+                textCon.setText(hairPriority[position].getCondition());//글자나오기
+                imageHair.setBackgroundResource(hairPriority[position].getImageNumber());//이미지나오기
+            }
+            //카메라
+            @Override
+            public void onItemClick2(HairAdapter.ViewHolder holder, View view, int position) {
+                Intent intent = new Intent(getContext(), CameraActivity.class);
+                intent.putExtra("selectHair",hairPriority[position].getImageNumber());
+                startActivity(intent);
+
+
             }
         });
         return rootView;

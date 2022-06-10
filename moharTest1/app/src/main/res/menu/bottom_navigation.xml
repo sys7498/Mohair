@@ -4,31 +4,30 @@
         android:id="@+id/tab1"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_delete"
-        android:title="홈"/>
-
+        android:icon="@drawable/home"
+        android:title="홈" />
     <item
         android:id="@+id/tab2"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="카메라"
+        android:icon="@drawable/hair"
+        android:title="헤어추천"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/tab3"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="헤어추천"
+        android:icon="@drawable/recom"
+        android:title="제품추천"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/tab4"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="제품추천"
+        android:icon="@drawable/gps"
+        android:title="미용실찾기"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/tab5"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
-        android:title="미용실찾기"
+        android:icon="@drawable/profile_revice_icon"
+        android:title="프로필"
         app:showAsAction="ifRoom" />
 </menu>
